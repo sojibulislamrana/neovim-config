@@ -6,7 +6,13 @@ return {
       require("mason").setup()
     end,
   },
-
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup({})
+    end,
+  },
   -- Mason-lspconfig for automatic LSP server installation
   {
     "williamboman/mason-lspconfig.nvim",
